@@ -1,0 +1,64 @@
+{% extends 'base2.html' %}
+{% load static%}
+
+{% comment %} <html>
+    <title> {% endcomment %}
+{% block title %}Suggestion System{% endblock title %}
+    {% comment %} </title> {% endcomment %}
+{% block body %}
+{% comment %} <head> {% endcomment %}
+{% comment %} <link href="{% static 'css/style.css' %}" rel="stylesheet">
+</head>
+<body> {% endcomment %}
+{% comment %} <div class='bg'> {% endcomment %}
+  <div class="container">
+    <h1>Suggestion System</h1>
+    <form>
+        {% csrf_token %}
+      <div class="form-group">
+        <label for="title">Title:</label>
+        <input type="text" id="title" name="title" required>
+      </div>
+      <div class="form-group">
+        <label for="description">Description:</label>
+        <textarea id="description" name="description" rows="5"></textarea>
+      </div>
+      <div class="form-group">
+        <label for="department" required>Department:</label> 
+        <select>
+            <option value = "1"> 1
+            </option>
+            <option value = "2"> 2
+            </option>
+            <option value = "3"> 3
+            </option>
+            <option value = "4"> 4
+            </option>
+            <option value = "5"> 5
+            </option>
+            <option value = "6"> 6
+            </option>
+            <option value = "7"> 7
+            </option>
+            <option value = "8"> 8
+            </option>
+            <option value = "9"> 9
+            </option>
+            <option value = "10"> 10
+            </option>
+            </select>
+      </div>
+      <div class="form-group">
+        <label for="attachment">Attachment:</label>
+        <label class="file-input">
+          Choose File
+          <input type="file" id="attachment" name="attachment">
+        </label>
+      </div>
+      <button type="submit" class="submit-btn">Submit</button>
+    </form>
+  </div>
+{% comment %} </div> {% endcomment %}
+{% endblock body %}
+{% comment %} </body>
+</html> {% endcomment %}

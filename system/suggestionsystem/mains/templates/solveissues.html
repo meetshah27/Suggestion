@@ -1,0 +1,30 @@
+{% extends 'base3.html' %}
+{% load static %}
+
+{% block title%}Review Manager{% endblock title%}
+
+{% block body %}
+<div class="container">
+    <h1>Suggestion System</h1>
+    <form>
+      <div class="form-group">
+        <label for="title">Title:</label>
+        <input type="text" id="title" name="title" required>
+      </div>
+      <div class="form-group">
+        <label for="description">Description:</label>
+        <textarea id="description" name="description" rows="5"></textarea>
+      </div>
+      <div class="form-group">
+      </div>
+      <div class="form-group">
+        <label for="attachment">Attachment:</label>
+        <label class="file-input">
+          Choose File
+          <input type="file" id="attachment" name="attachment">
+        </label>
+      </div>
+      <button type="submit" class="submit-btn">Submit</button>
+    </form>
+  </div>
+{% endblock body %}
